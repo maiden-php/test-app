@@ -3,3 +3,16 @@ Todos
 --------------------
 directory structure + architecture
 
+router
+- htaccess
+- regular expressions
+
+composer
+
+phpunit setup
+
+Config
+- db
+- env
+
+DB - pdo abstraction layer for mysql
