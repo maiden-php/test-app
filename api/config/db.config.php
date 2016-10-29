@@ -10,4 +10,4 @@ return [
 		'password' => 'asd'
 	]
 	
-]
+];

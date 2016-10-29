@@ -1,8 +1,10 @@
 <?php
 
+// app init
+declare(strict_types=1);
 
-// composer
 require 'vendor/autoload.php';
 
-// bootstrap file to begin the app
+require 'api/components/init.php';
 
+include 'api/components/Router/index.php';
