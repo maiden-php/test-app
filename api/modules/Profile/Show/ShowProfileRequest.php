@@ -9,10 +9,7 @@ namespace API\Modules\Profile\Show;
  */
 class ShowProfileRequest
 {
-    public $profile_id;
-
-    function __construct($profile_id)
-    {
-        $this->profile_id = $profile_id;
-    }
+    public $id;
+    public $body;
+    public $games;
 }

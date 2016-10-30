@@ -4,12 +4,10 @@ namespace API\Modules\Profile\Show;
 
 class ShowProfileController
 {
-    function show($data)
+    function execute($data)
     {
-        /**
-         * ProfileModel::create($data)
-         *
-         * UserModel::create();
-         */
+        echo 'controller' . '<br>';
+
+        return $data;
     }
 }

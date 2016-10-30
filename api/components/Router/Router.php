@@ -2,30 +2,59 @@
 
 namespace API\Components\Router;
 
+use API\Components\Response\Response;
+
 class Router
 {
     /**
      * Router constructor.
-     * @param Controller $controller
      */
-    function __construct(Controller $controller)
+    function __construct()
     {
-        $this->controller = $controller;
-        $this->pageUrl = trim($_SERVER['REQUEST_URI'], '/');
+        $this->pageUrl = $this->getURL();
     }
 
-    public function get($requestRoute, array $settings = [])
+    /**
+     * @param $requestRoute
+     * @param array $settings
+     * @return bool
+     */
+    public function action($requestRoute, array $settings = [])
     {
-        if (trim($requestRoute, '/') == $this->pageUrl) {
-            return true;
-            // want to call a controller
-            //return $this->controller->action();
+        if (trim($requestRoute, '/') == $this->getURL())
+        {
+            // only for POST requests
+            $inputs = (new \ReflectionClass(new $settings['request']))->getProperties();
+            $valid_inputs = array_intersect($inputs, $_POST);
+
+            // Data Transport Object
+            $DTO = [
+                'DTO' => 'success!'
+            ];
+            
+            // controller
+            $controller = new $settings['controller'];
+            $controllerData = $controller->execute($DTO);
+
+            // response
+            $response = new $settings['response'];
+            $responseData = $response->execute($controllerData);
+
+            return $responseData;
         }
-        return false;
+        else {
+            Response::json([
+                'status' => 1337,
+                'message' => 'Yo Buddy, your route does not exist.'
+            ]);
+        }
     }
 
     public function getURL()
     {
-        return $this->pageUrl;
+        if (isset($_SERVER['REQUEST_URI'])) {
+            return trim($_SERVER['REQUEST_URI'], '/');
+        }
+        return '';
     }
 }

@@ -2,12 +2,12 @@
 
 namespace API\Modules\Profile\Show;
 
+use API\Components\Response\Response;
+
 class ShowProfileResponse
 {
-    public function response()
+    public function execute($data)
     {
-        return [
-            'hey' => 1
-        ];
+        return Response::json($data);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace API\Modules\Profile;
+namespace API\Modules\Settings;
 
 use API\Components\Router\Controller;
 use API\Components\Router\Router;
@@ -8,7 +8,7 @@ use API\Modules\Profile\Show\ShowProfileRequest;
 use API\Modules\Profile\Show\ShowProfileController;
 use API\Modules\Profile\Show\ShowProfileResponse;
 
-class ProfileRoutes
+class SettingsRoutes
 {
     function __construct()
     {
@@ -20,9 +20,8 @@ class ProfileRoutes
         /**
          * Get the profile with the specified id
          */
-        $this->router->action('/profile', [
+        $this->router->get('/profiles/:id', [
             'prefix' => '/api/v1/',
-            'method' => 'GET',
             'request' => ShowProfileRequest::class,
             'middleware' => [
 
@@ -37,10 +36,11 @@ class ProfileRoutes
             'response' => ShowProfileResponse::class,
         ]);
 
-        // POST request
-/*        $this->router->action('/profile', [
+        /**
+         * Update profile with given id
+         */
+        $this->router->post('/profiles/update', [
             'prefix' => '/api/v1/',
-            'method' => 'POST',
             'request' => ShowProfileRequest::class,
             'middleware' => [
 
@@ -53,6 +53,6 @@ class ProfileRoutes
 
             ],
             'response' => ShowProfileResponse::class,
-        ]);*/
+        ]);
     }
 }

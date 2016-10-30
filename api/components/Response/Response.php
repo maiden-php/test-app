@@ -15,4 +15,11 @@ class Response
         echo json_encode($data);
         return $data;
     }
+
+    public static function xml($data)
+    {
+        header('Content-type: application/xml');
+        echo $data;
+        return $data;
+    }
 }
