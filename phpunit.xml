@@ -11,6 +11,7 @@
     <testsuites>
         <testsuite name="Application Test Suite">
             <directory suffix="Test.php">./tests/Config/</directory>
+            <directory>./tests/App</directory>
         </testsuite>
     </testsuites>
 </phpunit>
