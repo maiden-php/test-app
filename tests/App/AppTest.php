@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Api\Components\App\App as Singleton;
+use API\Components\App\App as Singleton;
 
 class SingletonTest extends TestCase
 {
@@ -10,7 +10,7 @@ class SingletonTest extends TestCase
         $firstCall = Singleton::getInstance();
         $secondCall = Singleton::getInstance();
 
-        $this->assertInstanceOf('DesignPatterns\Creational\Singleton\Singleton', $firstCall);
+        $this->assertInstanceOf('API\Components\App\App', $firstCall);
         $this->assertSame($firstCall, $secondCall);
     }
 }

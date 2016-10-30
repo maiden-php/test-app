@@ -1,18 +1,18 @@
 <?php
 
-namespace Api\Components\App;
+namespace API\Components\App;
 
 final class App
 {
     /**
-     * @var Singleton
+     * @var Singleton (App)
      */
     private static $instance;
 
     /**
      * gets the instance via lazy initialization (created on first usage)
      */
-    public static function getInstance(): Singleton
+    public static function getInstance(): App // Singleton
     {
         if (null === static::$instance) {
             static::$instance = new static();
