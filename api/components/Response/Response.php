@@ -5,6 +5,8 @@ namespace API\Components\Response;
 class Response
 {
     /**
+     * Returns JSON
+     *
      * @param $data
      *
      * @return array
@@ -16,6 +18,13 @@ class Response
         return $data;
     }
 
+    /**
+     * Returns xml
+     *
+     * @param $data
+     * 
+     * @return mixed
+     */
     public static function xml($data)
     {
         header('Content-type: application/xml');

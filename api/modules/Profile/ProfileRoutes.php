@@ -24,16 +24,10 @@ class ProfileRoutes
             'prefix' => '/api/v1/',
             'method' => 'GET',
             'request' => ShowProfileRequest::class,
-            'middleware' => [
-
-            ],
-            'validation' => [
-
-            ],
+            'middleware' => [],
+            'validation' => [],
             'controller' => ShowProfileController::class,
-            'events' => [
-
-            ],
+            'events' => [],
             'response' => ShowProfileResponse::class,
         ]);
 
