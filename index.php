@@ -7,4 +7,4 @@ require 'vendor/autoload.php';
 
 require 'api/components/init.php';
 
-include 'api/components/Router/index.php';
+//include 'api/components/Router/index.php';
