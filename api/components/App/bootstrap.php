@@ -1,5 +1,10 @@
 <?php
 
-declare(strict_types=1);
+$router = new \API\Components\Router\Router();
 
-require '../../../vendor/autoload.php';
+// scans all the routes int he api/modules folder and includes them
+include 'routes.php';
+
+$container = new API\Components\App\Container([
+    'config' => 'app.config.php'
+]);

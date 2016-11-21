@@ -11,10 +11,10 @@ class Response
      *
      * @return array
      */
-    public static function json($data)
+    public static function json(array $data)
     {
         header('Content-type: application/json');
-        echo json_encode($data);
+        echo json_encode($data, true);
         return $data;
     }
 
@@ -30,5 +30,18 @@ class Response
         header('Content-type: application/xml');
         echo $data;
         return $data;
+    }
+
+    /**
+     * * Note - use the Crystal Templating Engine
+     *
+     * @param $view
+     * @param $data
+     */
+    public static function view($view, $data)
+    {
+        extract($data);
+
+        include $view;
     }
 }

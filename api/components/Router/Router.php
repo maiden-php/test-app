@@ -6,12 +6,15 @@ use API\Components\Response\Response;
 
 class Router
 {
+    private $routes;
+
     /**
      * Router constructor.
      */
     function __construct()
     {
         $this->pageUrl = $this->getURL();
+        $this->routes = [];
     }
 
     /**
@@ -21,6 +24,8 @@ class Router
      */
     public function action($requestRoute, array $settings = [])
     {
+        //$this->routes[$requestRoute] = $settings;
+
         if (trim($requestRoute, '/') == $this->getURL())
         {
             // only for POST requests
@@ -42,12 +47,12 @@ class Router
 
             return $responseData;
         }
-        else {
+/*        else {
             Response::json([
                 'status' => 1337,
                 'message' => 'Yo Buddy, your route does not exist.'
             ]);
-        }
+        }*/
     }
 
     public function getURL()
@@ -56,5 +61,9 @@ class Router
             return trim($_SERVER['REQUEST_URI'], '/');
         }
         return '';
+    }
+
+    public function storeRoutes() {
+
     }
 }

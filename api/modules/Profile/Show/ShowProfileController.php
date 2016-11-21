@@ -6,7 +6,7 @@ class ShowProfileController
 {
     function execute($data)
     {
-        echo 'controller' . '<br>';
+        //echo 'controller' . '<br>';
 
         return $data;
     }

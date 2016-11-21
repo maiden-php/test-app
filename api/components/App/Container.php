@@ -1,6 +1,6 @@
 <?php
 
-namespace API\Components\Container;
+namespace API\Components\App;
 
 /**
  * Created by PhpStorm.
@@ -17,9 +17,9 @@ class Container
         $this->items = $items;
     }
 
-    function set($service)
+    function set($key, $value)
     {
-        $this->items[] = $service;
+        $this->items[$key] = $value;
     }
 
     function get($service)

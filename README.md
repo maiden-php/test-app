@@ -7,7 +7,7 @@
 - design patterns
 - composer
 - security
-- regular expression
+- regular expression - https://www.youtube.com/watch?v=3mQf6XhXkTE&t=438s
 - htaccess
 - output buffers, ob_start, end, clean
 - generators and iterators
@@ -20,5 +20,16 @@
 
 ### Components
 - Router
-- Container
+- Container / DI container
 - App
+- Exception / ways of handling errors
+- Response -> json, view
+- Request->json, string
+
+
+### Structure of the App
+
+### Router
+- multiple routes at the same time
+- parameters in routes
+- same rout names

@@ -7,7 +7,7 @@ use API\Modules\Profile\Show\ShowProfileResponse;
 /**
  * Get the profile with the specified id
  */
-$router->action('/profiles', [
+/*$router->action('/home', [
     'prefix' => '/api/v1/',
     'method' => 'GET',
     'request' => ShowProfileRequest::class,
@@ -15,6 +15,6 @@ $router->action('/profiles', [
     'validation' => [],
     'controller' => ShowProfileController::class,
     'events' => [],
-    'response' => ShowProfileResponse::class,
-]);
+    'response' => \API\Modules\Home\ShowHomeResponse::class
+]);*/
 

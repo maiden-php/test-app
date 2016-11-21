@@ -2,7 +2,7 @@
 
 namespace API\Modules\Profile\Show;
 
-class ShowProfileController
+class LoginController
 {
     function execute($data)
     {

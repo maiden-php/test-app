@@ -2,7 +2,7 @@
 
 namespace API\Modules\Profile\Show;
 
-class ShowProfileController
+class RegisterController
 {
     function execute($data)
     {
