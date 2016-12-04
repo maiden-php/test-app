@@ -17,7 +17,7 @@
 
 ## Features List
 - a functional version of the app
-
+- pretty 
 ### Components
 - Router
 - Container / DI container

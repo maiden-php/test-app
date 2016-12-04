@@ -5,6 +5,8 @@ return [
         'key' => 'asdasd'
     ],
     'twilio' => [
-        'key' => 'asdasdasd'
+        'key'           => 'asdasdasd',
+        'sid'           => '123123',
+        'phone_number'  => 'asdasdasd'
     ]
 ];

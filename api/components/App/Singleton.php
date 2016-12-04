@@ -2,7 +2,7 @@
 
 namespace API\Components\App;
 
-final class App
+final class Singleton
 {
     /**
      * @var Singleton (App)

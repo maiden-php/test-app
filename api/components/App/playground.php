@@ -39,6 +39,3 @@ var_dump(dirname($path, 2));*/
 
 /*$regex = '/Routes.php/i';
 var_dump((bool) preg_match($regex, 'Here is a sentence, I love heyRoutes.php files'));*/
-
-
-//var_dump(preg_split('/namespace/', file_get_contents('C:\xampp\htdocs\projects\mewphp/api/modules\Profile\ProfileRoutes.php')));

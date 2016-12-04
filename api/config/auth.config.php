@@ -1,13 +1,19 @@
 <?php
 
 return [
-    'facebook' => [
+    'auth_table'        => 'users',
+    'passwords_table'   => 'passwords',
+    'session'   => [
+        'table'     => 'sessions',
+        'sessid'    => 'some hash'
+    ],
+    'facebook'  => [
         'key' => '123'
     ],
-    'twitter' => [
+    'twitter'   => [
         'key' => '123'
     ],
-    'linkedin' => [
+    'linkedin'  => [
         'key' => '123'
     ]
 ];

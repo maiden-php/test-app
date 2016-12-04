@@ -1,0 +1,24 @@
+How does our framework work?
+
+1. index.php -> bootstrap.inc - composition root
+2. use the controller to
+3. dev writes his own code based off of your standards
+
+
+Want the main concept to be a DI container as the central flow
+utilize Dependency injection and inversion to the maximum potential
+
+use Auryn, PHP DI, or Pimple, or Symfony DI
+
+service locator?
+
+Registry design pattern?
+Composition Root Design Pattern?
+Front-Controller Design Pattern?
+
+DI Pattern?
+
+https://www.udemy.com/php-mvc-from-scratch/
+https://www.codeproject.com/articles/1080626/code-your-own-php-mvc-framework-in-hour
+laracasts - framework
+phpacademy - framework

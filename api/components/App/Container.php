@@ -2,15 +2,9 @@
 
 namespace API\Components\App;
 
-/**
- * Created by PhpStorm.
- * User: yichen
- * Date: 10/29/2016
- * Time: 8:01 PM
- */
 class Container
 {
-    public $items = [];
+    private $items = [];
 
     function __construct($items)
     {
