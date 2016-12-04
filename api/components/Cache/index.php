@@ -1,12 +1,18 @@
 <?php
 
-namespace API\Components\Cache;
+class Facade
+{
+    public static function __callStatic($name, $arguments)
+    {
+        self::$name();
+    }
+}
 
 class Cache extends Facade
 {
     private static $caches = [];
 
-    public function __construct()
+    private function __construct()
     {
     }
 
@@ -24,9 +30,8 @@ class Cache extends Facade
     {
         return self::$caches;
     }
-
-    public static function toString()
-    {
-        return __CLASS__;
-    }
 }
+
+
+Cache::set('key1', 'value1');
+echo Cache::get('key1');

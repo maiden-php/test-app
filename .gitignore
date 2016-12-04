@@ -1,3 +1,5 @@
 .idea
 composer.lock
 vendor
+#api/config/env.config.php
+api/config/test.config.yml
