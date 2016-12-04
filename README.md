@@ -1,3 +1,6 @@
+# Maiden Framework
+[![Build Status](https://travis-ci.org/yichenzhu1337/mewphp.svg?branch=master)](https://travis-ci.org/yichenzhu1337/mewphp)
+
 # Learning Goals
 - serialize, unserialize
 - unset
