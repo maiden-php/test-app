@@ -3,11 +3,11 @@
 
 require 'vendor/autoload.php';
 
-echo '-------------------------------------';
+echo '----------------------------------------';
 echo PHP_EOL;
-echo '----- Welcome to the Maiden CLI -----';
+echo '----- Welcome to the MaidenPHP CLI -----';
 echo PHP_EOL;
-echo '-------------------------------------';
+echo '----------------------------------------';
 echo PHP_EOL;
 
 $commands = [
@@ -17,5 +17,5 @@ $commands = [
 ];
 
 foreach ($commands as $command => $description) {
-    echo " $command - $description", PHP_EOL;
+    echo " * $command - $description", PHP_EOL;
 }
