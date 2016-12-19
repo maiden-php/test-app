@@ -23,4 +23,8 @@ class ConfigTest extends TestCase
         $this->assertEquals(\API\Components\Config\Config::get('testkey'), 'mother');
     }
 
+    function testConfigFunction()
+    {
+        $this->assertEquals(config('mailchimp.key'), 'chimpster', 'Config should return the right key using the dot notation');
+    }
 }

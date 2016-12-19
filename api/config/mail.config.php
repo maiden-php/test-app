@@ -2,7 +2,7 @@
 
 return [
     'mailchimp' => [
-        'key' => 'asdasd'
+        'key' => 'chimpster'
     ],
     'twilio' => [
         'key'           => 'asdasdasd',

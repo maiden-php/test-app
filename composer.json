@@ -10,6 +10,7 @@
           ]
         },
         "files": [
+          "api/components/App/helpers.php"
         ],
         "classmap": [
         ]
